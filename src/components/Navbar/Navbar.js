@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import payload from '../../resolvers/payload';
+
 import './Navbar.css';
 
 
@@ -9,12 +11,14 @@ class Navbar extends Component {
 
     chargeProfile = () => {
 
-        const token = false;
-        if(token){
+        const token = localStorage.getItem('token')
+        if(token !== null){
+
+            let pl = payload(token)
           return (
                 <ul className='navbar-nav'>
                     <li className="navbar-item">
-                        <Link to="/" className="nav-link">Welcome fulanito</Link>
+                        <Link to="/" className="nav-link">Welcome {pl.email}</Link>
                     </li>
                     <li className="navbar-item">
                         <Link to="/home" className="nav-link">Home</Link>
