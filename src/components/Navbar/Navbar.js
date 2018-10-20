@@ -26,6 +26,12 @@ class Navbar extends Component {
                     <li className="navbar-item">
                         <Link to="/"  className="nav-link">Profile</Link>
                     </li>
+                    <li className="navbar-item">
+                        <Link to="/movies"  className="nav-link">Movies</Link>
+                    </li>
+                    <li className="navbar-item">
+                        <Link to="/logout"  className="nav-link">Logout</Link>
+                    </li>
                 </ul>
           )
         }else{
