@@ -1,0 +1,28 @@
+.movies-title{
+    color: #fff;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.image-small{
+    width: 50%;
+    height: 50%;
+}
+
+.card{
+    align-content: center;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 160px;
+    display: inline-block
+}
+
+.card-image{
+    padding-bottom: 0px;
+    width: 60%;
+    height: 60%;
+}

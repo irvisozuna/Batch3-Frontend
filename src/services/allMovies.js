@@ -16,9 +16,9 @@ export default () => {
                         year,
                         director,
                         rank,
-                        director,
                         plot,
-                        cast
+                        cast,
+                        image
                     }
                 }
             `
