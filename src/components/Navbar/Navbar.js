@@ -18,15 +18,15 @@ class Navbar extends Component {
             let pl = payload(token)
           return (
                 <ul className='navbar-nav'>
-                    
+
                     <li className="navbar-item">
-                        <Link to="/" className="nav-link">Welcome {pl.email}</Link>
+                        <Link to={`/profile/${pl.id}`} className="nav-link">Welcome {pl.email}</Link>
                     </li>
 
                     <NavBarLink to='/home' title='Home'/>
-                    <NavBarLink to='/profile' title='Profile'/>
                     <NavBarLink to='/movies' title='Movies'/>
                     <NavBarLink to='/logout' title='Logout'/>
+                    <NavBarLink to='/new-movie' title='Add Movie'/>
                 </ul>
           )
         }else{

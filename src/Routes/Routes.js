@@ -10,6 +10,9 @@ import checkToken from '../resolvers/checkToken';
 import Movies from '../components/Movies/Movies';
 import Movie from '../components/Movie/Movie';
 import WatchMovie from '../components/WatchMovie/WatchMovie';
+import Profile from '../components/Profile/Profile';
+import EditProfile from '../components/Profile/EditProfile';
+import NewMovie from '../components/NewMovie/NewMovie';
 
 
 
@@ -35,6 +38,9 @@ class Routes extends Component {
                     <PrivateRoute exact path='/movies' component={Movies} />
                     <PrivateRoute exact path='/movie/:id' component={Movie} />
                     <PrivateRoute exact path='/watch/:id' component={WatchMovie} />
+                    <PrivateRoute exact path='/profile/:id' component={Profile} />
+                    <PrivateRoute exact path='/profile/edit/:id' component={EditProfile} />
+                    <PrivateRoute exact path='/new-movie' component={NewMovie} />
                 </main>
             </Router>
         )
