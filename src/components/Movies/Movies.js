@@ -1,6 +1,7 @@
 import React, { Component} from 'react';
 import allMovies from '../../services/allMovies';
 import CardMovie from '../CardMovie/CardMovie';
+import addRank from '../../services/addRank';
 
 import './Movies.css';
 
@@ -27,6 +28,12 @@ class Movies extends Component{
         this.props.history.push(`/movie/${id}`);
     }
 
+    getRankValue=(id,rank)=>{
+        addRank({id,rank}).then((resp)=>{
+            console.log(resp)
+        })
+    }
+
     renderMovies = () => {
         if(this.state.movies !== ''){
 
@@ -35,7 +42,8 @@ class Movies extends Component{
                    <CardMovie 
                         key={index}
                         movie={movie}
-                        redirect={this.redirect} />
+                        redirect={this.redirect}
+                        getRank={this.getRankValue} />
 
                 )
             }) 

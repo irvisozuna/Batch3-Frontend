@@ -13,6 +13,7 @@ import WatchMovie from '../components/WatchMovie/WatchMovie';
 import Profile from '../components/Profile/Profile';
 import EditProfile from '../components/Profile/EditProfile';
 import NewMovie from '../components/NewMovie/NewMovie';
+import DeleteMovie from '../components/DeleteMovie/DeleteMovie';
 
 
 
@@ -41,6 +42,7 @@ class Routes extends Component {
                     <PrivateRoute exact path='/profile/:id' component={Profile} />
                     <PrivateRoute exact path='/profile/edit/:id' component={EditProfile} />
                     <PrivateRoute exact path='/new-movie' component={NewMovie} />
+                    <PrivateRoute exact path='/movie/delete/:id' component={DeleteMovie} />
                 </main>
             </Router>
         )

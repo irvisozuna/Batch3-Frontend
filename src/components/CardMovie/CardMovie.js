@@ -1,26 +1,40 @@
 import React , { Component } from 'react';
-
+import Rate from 'rc-rate';
 import '../Movies/Movies.css';
+import calculateRank from './calculateRank';
 
 
 class CardMovie extends Component{
 
     state={
-        movie: this.props.movie
+        movie: this.props.movie,
+        rank: calculateRank(this.props.movie.rank)
+    }
+
+    componentDidMount(){
+        console.log(this.props.movie,'<<<<')
     }
 
     render(){
         return(
-             <div className='card' style={{width:'14rem'}}>
+            <div>
+            <div className='card' style={{width:'14rem'}} >
                         <h5 className='card-title'
-                            onClick={() => this.props.redirect(this.state.movie._id)}>
+                           >
                             {this.state.movie.name}
                         </h5>
-                        <img src={this.state.movie.image} className='image-small' alt="Poster"/>
+                        <img src={this.state.movie.image} className='image-small' alt="Poster"  onClick={() => this.props.redirect(this.state.movie._id)}/>
                         <div className='card-body'>
-                            <p>4.0</p>
+                            <Rate 
+                                defaultValue={parseFloat(this.state.rank)}
+                                allowHalf
+                                onChange={(rank)=>this.props.getRank(this.state.movie._id, rank)}
+                            />
+                            <p>{this.state.rank}</p>
                         </div>
                     </div>
+            </div>
+             
         )
     }
 }
