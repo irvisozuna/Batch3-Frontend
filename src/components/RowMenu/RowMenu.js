@@ -23,11 +23,11 @@ class RowMenu extends Component{
             <tr>
                 <td>
                     <div>
-                        <strong><Moment  filter={toUpperCaseFilter} format="dddd">{this.state.menu.date}</Moment></strong> {this.state.menu.description}
+                        <strong><Moment  filter={toUpperCaseFilter} format="dddd">{this.state.menu.date}</Moment></strong> 
                     </div>
                 </td>
                 <td>
-                    <a className="btn btn-success" href="/new-menu" target="_self">+</a>
+                    {this.state.menu.description}
                 </td>
             </tr>
              

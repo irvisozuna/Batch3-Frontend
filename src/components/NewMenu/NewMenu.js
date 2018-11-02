@@ -1,8 +1,8 @@
 import React, { Component} from 'react';
-import addMenu from '../../services/addMenu';
+import {addMenu} from '../../services/menu';
 import Firebase from '../../Firebase';
 // import FileUploader from 'react-firebase-file-uploader';
-import allCompanies from '../../services/allCompanies'
+//import allCompanies from '../../services/allCompanies'
 
 class NewMenu extends Component{
 
@@ -12,14 +12,14 @@ class NewMenu extends Component{
         allCompanies: [],
         formFull: false,
     }
-
+/* 
     componentDidMount(){
         allCompanies().then((resp)=>{
             this.setState({
                 allCompanies: resp.data.data.allCompanies
             })
         })
-    }
+    } */
 
     createSelector = (data,name) =>{
         let options = data.map((option)=>{
@@ -51,7 +51,7 @@ class NewMenu extends Component{
 
         addMenu(this.state).then((resp)=>{
             console.log(resp.data.data);
-            this.props.history.push('/movies');
+            this.props.history.push('/menus');
         })
     } 
 

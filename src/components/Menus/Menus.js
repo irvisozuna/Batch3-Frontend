@@ -74,7 +74,7 @@ class Menus extends Component{
                 <thead>
                 <tr>
                     <th>Dia de la Semana</th>
-                    <th>Acción</th>
+                    <th>Comida</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -83,6 +83,7 @@ class Menus extends Component{
                 </table>
                 </div>
                 </div>
+                <a class="btn btn-success" href="/new-menu" target="_self">Agregar Menú</a>
                 </div>
                 </div>
             </div>
