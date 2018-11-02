@@ -10,16 +10,16 @@ export default () => {
         data:{
             query: `
                 query{
-                    allMovies{
+                    allMenus{
                         _id,
-                        name,
-                        year,
-                        director,
-                        rank,
-                        plot,
-                        cast,
-                        image
-                    }
+                            description,
+                            date,
+                            company{
+                                name,
+                                _id,
+                                description
+                            }
+                      }
                 }
             `
         },headers:{'Authorization': 'JWT ' +getToken()}

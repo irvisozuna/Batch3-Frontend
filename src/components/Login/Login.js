@@ -28,7 +28,7 @@ class Login extends Component{
                 let token = resp.data.token
                 localStorage.setItem('token',token);
                 console.log(this.props)
-                this.props.history.push('/')
+                this.props.history.push('/home')
             }else{
                 console.log(resp.data)
             }

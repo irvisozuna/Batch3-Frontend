@@ -7,12 +7,12 @@ import Signup from '../components/Signup/Signup';
 import Logout from '../components/Logout/Logout';
 import Privado from '../components/Privado/Privado';
 import checkToken from '../resolvers/checkToken';
-import Movies from '../components/Movies/Movies';
+import Menus from '../components/Menus/Menus';
 import Movie from '../components/Movie/Movie';
 import WatchMovie from '../components/WatchMovie/WatchMovie';
 import Profile from '../components/Profile/Profile';
 import EditProfile from '../components/Profile/EditProfile';
-import NewMovie from '../components/NewMovie/NewMovie';
+import NewMenu from '../components/NewMenu/NewMenu';
 import DeleteMovie from '../components/DeleteMovie/DeleteMovie';
 
 
@@ -32,17 +32,16 @@ class Routes extends Component {
                 <main>
                     <Navbar/>
                     <Route exact path='/' component={Login} />
-                    <Route exact path='/home' component={Home} />
+                    <PrivateRoute exact path='/home' component={Menus} />
                     <Route exact path='/login' component={Login} />
                     <Route exact path='/signup' component={Signup} />
                     <Route exact path='/logout' component={Logout} />
                     <PrivateRoute exact path='/privado' component={Privado} />
-                    <PrivateRoute exact path='/movies' component={Movies} />
                     <PrivateRoute exact path='/movie/:id' component={Movie} />
                     <PrivateRoute exact path='/watch/:id' component={WatchMovie} />
                     <PrivateRoute exact path='/profile/:id' component={Profile} />
                     <PrivateRoute exact path='/profile/edit/:id' component={EditProfile} />
-                    <PrivateRoute exact path='/new-movie' component={NewMovie} />
+                    <PrivateRoute exact path='/new-menu' component={NewMenu} />
                     <PrivateRoute exact path='/movie/delete/:id' component={DeleteMovie} />
                 </main>
             </Router>

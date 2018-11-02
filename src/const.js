@@ -1,4 +1,4 @@
 export default{
-    url: 'https://warm-tor-70060.herokuapp.com/',
+    url: 'http://192.168.100.16:8000/',
     local: 'http://localhost:3000/'
 }
