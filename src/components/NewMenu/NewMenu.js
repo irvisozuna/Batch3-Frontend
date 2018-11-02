@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 import {addMenu} from '../../services/menu';
 import Firebase from '../../Firebase';
 // import FileUploader from 'react-firebase-file-uploader';
-//import allCompanies from '../../services/allCompanies'
+import {AllCompanies} from '../../services/company';
 
 class NewMenu extends Component{
 
@@ -12,14 +12,14 @@ class NewMenu extends Component{
         allCompanies: [],
         formFull: false,
     }
-/* 
+
     componentDidMount(){
-        allCompanies().then((resp)=>{
+        AllCompanies().then((resp)=>{
             this.setState({
                 allCompanies: resp.data.data.allCompanies
             })
         })
-    } */
+    }
 
     createSelector = (data,name) =>{
         let options = data.map((option)=>{
@@ -68,16 +68,22 @@ class NewMenu extends Component{
             return(
                 <form onSubmit={this.handleSubmit}>
                     <div className='form-group'>
-                        <label htmlFor="name">Fecha:</label>
-                        <input type="text" value={this.state.name}
-                            className='form-control' name='name'
+                        <label htmlFor="date">Fecha:</label>
+                        <input type="date" value={this.state.date}
+                            className='form-control' name='date'
                             onChange={this.onChangeInput}/>
                     </div>
                     <div className='form-group'>
-                        <label htmlFor="plot">Comida:</label>
-                        <textarea value={this.state.plot}
-                            className='form-control' name='plot' cols='30' rows='10'
+                        <label htmlFor="description">Comida:</label>
+                        <textarea value={this.state.description}
+                            className='form-control' name='description' cols='30' rows='10'
                             onChange={this.onChangeInput}></textarea>
+                    </div>
+                    <div className='form-group'>
+                        <label htmlFor="price">Precio:</label>
+                        <input type="number" value={this.state.price}
+                            className='form-control' name='price'
+                            onChange={this.onChangeInput}/>
                     </div>
                     <div className='form-group'>
                         <label htmlFor="company">Company:</label>
