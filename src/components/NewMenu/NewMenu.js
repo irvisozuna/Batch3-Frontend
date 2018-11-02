@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 import addMenu from '../../services/addMenu';
 import Firebase from '../../Firebase';
-import FileUploader from 'react-firebase-file-uploader';
+// import FileUploader from 'react-firebase-file-uploader';
 import allCompanies from '../../services/allCompanies'
 
 class NewMenu extends Component{
