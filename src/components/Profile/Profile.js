@@ -22,7 +22,7 @@ class Profile extends Component{
 
     loadUserData(){
 
-        let { name, email, phone, lastName } = this.state.userData;
+        let { name, email, phone } = this.state.userData;
         if(this.state.userData === ''){
             return(
                 <div>Loading your info...</div>
@@ -30,11 +30,10 @@ class Profile extends Component{
         }else{
             return(
                 <div>
-                    <h1>This is your profile</h1>
-                    <h2>Name: <strong>{name}</strong></h2>
-                    <h2>Last Name: <strong>{lastName}</strong></h2>
+                    <h1>Perfil </h1>
+                    <h2>Nombre: <strong>{name}</strong></h2>
                     <h2>Phone: <strong>{phone}</strong></h2>
-                    <Link to={`/profile/edit/${this.props.match.params.id}`}>Edit Profile</Link>
+                    <Link to={`/profile/edit/${this.props.match.params.id}`}>Editar Perfil</Link>
                 </div>
             )
         }

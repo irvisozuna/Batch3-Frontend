@@ -84,16 +84,17 @@ export const addMenu = (data) => {
         data:{
             query:`
                 mutation {
-                    addMenu(data:data:${DataQuery}){
-                    _id,
-                    description,
-                    company{
+                    addMenu(data:${DataQuery}) {
+                      _id
+                      image
+                      description
+                      company {
                         name
+                        description
+                      }
+                      date
                     }
-                    date,
-                    price
-                    }
-                }
+                  }
             `
         },headers:{'Authorization': 'JWT ' +getToken()}
     })

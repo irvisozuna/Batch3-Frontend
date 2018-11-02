@@ -33,16 +33,14 @@ class Routes extends Component {
                     <Navbar/>
                     <Route exact path='/' component={Login} />
                     <PrivateRoute exact path='/home' component={Menus} />
+                    <PrivateRoute exact path='/menus' component={Menus} />
                     <Route exact path='/login' component={Login} />
                     <Route exact path='/signup' component={Signup} />
                     <Route exact path='/logout' component={Logout} />
                     <PrivateRoute exact path='/privado' component={Privado} />
-                    <PrivateRoute exact path='/movie/:id' component={Menu} />
-                    <PrivateRoute exact path='/watch/:id' component={WatchMovie} />
                     <PrivateRoute exact path='/profile/:id' component={Profile} />
                     <PrivateRoute exact path='/profile/edit/:id' component={EditProfile} />
                     <PrivateRoute exact path='/new-menu' component={NewMenu} />
-                    <PrivateRoute exact path='/movie/delete/:id' component={DeleteMovie} />
                 </main>
             </Router>
         )

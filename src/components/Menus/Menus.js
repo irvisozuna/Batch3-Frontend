@@ -75,6 +75,7 @@ class Menus extends Component{
                 <tr>
                     <th>Dia de la Semana</th>
                     <th>Comida</th>
+                    <th>Precio</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -7,7 +7,6 @@ class EditProfile extends Component{
     state={
         userData: '',
         name: '',
-        lastName: '',
         phone: '',
         email: '',
 
@@ -54,12 +53,6 @@ class EditProfile extends Component{
                             value={this.state.userData.name}
                             onChange={this.onChangeInput}
                             placeholder={this.state.userData.name}
-                            />
-                        <input type="text"
-                            name='lastName'
-                            value={this.state.lastName}
-                            onChange={this.onChangeInput}
-                            placeholder={this.state.userData.lastName}
                             />
                         <input type="text"
                             name='email'

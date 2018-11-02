@@ -29,6 +29,9 @@ class RowMenu extends Component{
                 <td>
                     {this.state.menu.description}
                 </td>
+                <td style={{textAlign:'right'}}>
+                    $ {this.state.menu.price}
+                </td>
             </tr>
              
         )

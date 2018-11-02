@@ -13,7 +13,6 @@ export default (id) => {
                     singleUser(id:"${id}"){
                         _id,
                         name,
-                        lastName,
                         email,
                         phone
                     }

@@ -18,7 +18,8 @@ export default () => {
                                 name,
                                 _id,
                                 description
-                            }
+                            },
+                            price
                       }
                 }
             `

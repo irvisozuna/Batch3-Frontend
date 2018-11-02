@@ -51,7 +51,7 @@ class NewMenu extends Component{
 
         addMenu(this.state).then((resp)=>{
             console.log(resp.data.data);
-            this.props.history.push('/menus');
+            this.props.history.push('/home');
         })
     } 
 

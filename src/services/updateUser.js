@@ -5,7 +5,7 @@ import getToken from '../resolvers/getToken';
 export default (id,data) => {
     let {name, lastName, email, phone } = data;
 
-    let DataQuery = `{name:"${name}",phone:"${phone}",lastName:"${lastName}",email:"${email}"}`
+    let DataQuery = `{name:"${name}",phone:"${phone}",email:"${email}"}`
 
     return axios({
         url: constantes.url+'graphql',

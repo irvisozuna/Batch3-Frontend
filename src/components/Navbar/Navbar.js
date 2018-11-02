@@ -24,17 +24,17 @@ class Navbar extends Component {
                     </li>
 
                     <NavBarLink to='/home' title='Home'/>
-                    <NavBarLink to='/movies' title='Movies'/>
+                    <NavBarLink to='/home' title='Menus'/>
                     <NavBarLink to='/logout' title='Logout'/>
-                    <NavBarLink to='/new-movie' title='Add Movie'/>
                 </ul>
           )
         }else{
           return (
-                <ul className='navbar-nav'>
+              <ul></ul>
+/*                 <ul className='navbar-nav'>
                 <NavBarLink to='/login' title='Login'/>
                 <NavBarLink to='/signup' title='Signup'/>
-                </ul>
+                </ul> */
           )
         }
       }
