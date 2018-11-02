@@ -52,7 +52,7 @@ export const Singlemenu = (id) => {
 export const updateMenu = (id,data) => {
     let {image, description, company, date } = data;
 
-    let DataQuery = `{image:"${image}",description:"${description}",date:"${company}",company:"${date}"}`
+    let DataQuery = `{image:"${image}",description:"${description}",date:"${date}",company:"${company}"}`
 
     return axios({
         url: constantes.url+'graphql',
@@ -72,5 +72,29 @@ export const updateMenu = (id,data) => {
                 }
             `
         },headers: { 'Authorization' : 'JWT ' +getToken()}
+    })
+}
+export const addMenu = (data) => {
+    let {image, description, company, date, price } = data;
+    let DataQuery = `{image:"${image}",description:"${description}",date:"${date}",company:"${company}",price:"${price}"}`
+
+    return axios({
+        url:constantes.url+'graphql',
+        method:'post',
+        data:{
+            query:`
+                mutation {
+                    addMenu(data:data:${DataQuery}){
+                    _id,
+                    description,
+                    company{
+                        name
+                    }
+                    date,
+                    price
+                    }
+                }
+            `
+        },headers:{'Authorization': 'JWT ' +getToken()}
     })
 }
