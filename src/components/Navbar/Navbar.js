@@ -44,7 +44,6 @@ class Navbar extends Component {
     render(){
         return(
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a  href="/">NopalFlix</a>
                 <button className='navbar-toggler' type="button" data-toggle="collapse" data-target='#navbar' 
                 aria-controls="navbar" aria-expanded="false" aria-label="Toggle" >
                     <span className="navbar-toggler-icon"></span>

@@ -23,7 +23,7 @@ class Routes extends Component {
 
         const PrivateRoute = ({component: Component, ...rest}) =>(
             <Route {...rest} render={(props) => (
-                checkToken() === true ? <Component {...props} /> : <Redirect to='/home' />
+                checkToken() === true ? <Component {...props} /> : <Redirect to='/login' />
                 )} />
         )
 
@@ -31,6 +31,7 @@ class Routes extends Component {
             <Router>
                 <main>
                     <Navbar/>
+                    <Route exact path='/' component={Login} />
                     <Route exact path='/home' component={Home} />
                     <Route exact path='/login' component={Login} />
                     <Route exact path='/signup' component={Signup} />
