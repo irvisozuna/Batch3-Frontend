@@ -23,7 +23,6 @@ class Login extends Component{
         e.preventDefault();
         console.log(this.state);
         login(this.state).then((resp)=>{
-            console.log('hola')
             if(resp.status === 200){
                 let token = resp.data.token
                 localStorage.setItem('token',token);
