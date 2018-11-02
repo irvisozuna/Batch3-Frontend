@@ -35,6 +35,7 @@ class Signup extends Component{
 
     onSubmitForm = (e) => {
         e.preventDefault();
+        debugger;
         if(this.validatePassword(this.state.password, this.state.check_password)){
             signup(this.state).then((response)=>{
                 console.log(response.data)
@@ -71,7 +72,7 @@ class Signup extends Component{
                         <div>
                             <p>{this.error}</p>
                         </div>
-                        <form className='login-form' onSubmit={this.submitForm}>
+                        <form className='login-form' onSubmit={this.onSubmitForm}>
                             <div className='col-xs-12'>
                                             <div className='form-group'>
                                                 <input type="text"

@@ -1,4 +1,4 @@
 export default{
-    url: 'http://localhost:8000/',
+    url: 'http://187.188.37.153:8000/',
     local: 'http://localhost:3000/'
 }
